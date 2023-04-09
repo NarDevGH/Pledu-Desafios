@@ -3,6 +3,21 @@ body{
     background: #e8e8e8;
 }
 
+ol li{
+    margin-left: 5%;
+}
+
+.saludo{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 200%;
+}
+
 .menu{
     list-style: none;
     padding: 0;
@@ -34,7 +49,6 @@ body{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    padding: 5px;
 }
 
 .profilePic{
