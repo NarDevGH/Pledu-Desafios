@@ -27,7 +27,7 @@
     <br>
     Por ejemplo<br>
     <br>
-    <img class="center" src="Images/Ejemplo_Codigo_1.PNG">
+    <img class="center" src="images/Ejemplo_Codigo_1.PNG">
     <p class="center"> A se ejecuta como una coroutina. El método StartCoroutine termina inmediatamente, pero genera una nueva corutina que se ejecuta en paralelo.</p>
     <br>
     <h3 class="center"> Por qué las Corutinas deben tener IEnumerator como tipo de retorno ❓</h3>
@@ -53,8 +53,8 @@
         <br>
         El siguiente fragmento de código muestra cómo puede utilizarse dentro de una coroutine:
     </p>
-    <img class="center" src="Images/Ejemplo_Codigo_2.PNG">
-    <img class="center" src="Images/Ejemplo_Imagen_1.png">
+    <img class="center" src="images/Ejemplo_Codigo_2.PNG">
+    <img class="center" src="images/Ejemplo_Imagen_1.png">
     <p class="center">
         El diagrama anterior, inspirado libremente en los <a href="https://en.wikipedia.org/wiki/Sequence_diagram">diagramas de secuencia de UML</a>, ilustra el efecto de <a href="https://docs.unity3d.com/ScriptReference/WaitForSeconds.html">WaitForSeconds</a>. Cuando se invoca en una coroutine (llamada A) suspende su ejecución hasta que haya transcurrido una cierta cantidad de tiempo. Este tipo de espera se denomina síncrona, porque la coroutina espera a que se complete otra operación.
     </p>
@@ -68,8 +68,8 @@
     <p class="center">
         Unity también permite iniciar nuevas corutinas dentro de una coroutine existente. La manera más simple en que esto puede ser logrado, es usando StartCoroutine. Cuando se invoca de esta manera, la coroutine generada coexiste en paralelo con la original. No interactúan directamente, y lo que es más importante, no se esperan la una a la otra. En comparación con la espera sincrónica presentada en el párrafo anterior, esta situación es asincrónica, ya que las dos corutinas no intentan permanecer sincronizadas.
     </p>
-    <img class="center" src="Images/Ejemplo_Codigo_3.PNG">
-    <img class="center" src="Images/Ejemplo_Imagen_2.png">
+    <img class="center" src="images/Ejemplo_Codigo_3.PNG">
+    <img class="center" src="images/Ejemplo_Imagen_2.png">
     <p class="center">
         Es importante notar que, en este ejemplo, B es una coroutine totalmente independiente. Terminar A no afecta a B, y viceversa.
     </p>
@@ -79,12 +79,12 @@
     <p class="center">
         También es posible ejecutar una coroutine anidada y esperar a que se complete su ejecución. La forma más sencilla de hacerlo es utilizando yield return.
     </p>
-    <img class="center" src="Images/Ejemplo_Codigo_4.PNG">
-    <img class="center" src="Images/Ejemplo_Imagen_3.png">
+    <img class="center" src="images/Ejemplo_Codigo_4.PNG">
+    <img class="center" src="images/Ejemplo_Imagen_3.png">
     <p class="center">
         Vale la pena notar que, dado que la ejecución de A se suspende durante la ejecución de B, este caso particular no necesita iniciar otra coroutina. Uno podría tener la tentación de optimizar la coroutine escribiendo algo como esto:
     </p>
-    <img class="center" src="Images/Ejemplo_Codigo_5.PNG">
+    <img class="center" src="images/Ejemplo_Codigo_5.PNG">
     <p class="center">
         Ejecutar B como una función tradicional tiene casi el mismo efecto. La única diferencia, sin embargo, es que B se ejecutará en un único fotograma. Usando StartCoroutine, en cambio, A se suspende y el siguiente frame puede ocurrir.<br>
         <br>
@@ -97,13 +97,13 @@
         <br>
         En el siguiente ejemplo, la coroutina B se ejecuta de forma asíncrona. Su padre A puede continuar su ejecución durante el tiempo que necesite. Luego, si es necesario, puede ceder la referencia a B para una espera sincrónica.
     </p>
-    <img class="center" src="Images/Ejemplo_Codigo_6.PNG">
-    <img class="center" src="Images/Ejemplo_Imagen_5.png">
+    <img class="center" src="images/Ejemplo_Codigo_6.PNG">
+    <img class="center" src="images/Ejemplo_Imagen_5.png">
     <p class="center">
         Esto es particularmente útil si desea iniciar varias corutinas paralelas, todas al mismo tiempo:
     </p>
-    <img class="center" src="Images/Ejemplo_Codigo_7.PNG">
-    <img class="center" src="Images/Ejemplo_Imagen_6.png">
+    <img class="center" src="images/Ejemplo_Codigo_7.PNG">
+    <img class="center" src="images/Ejemplo_Imagen_6.png">
     <p class="center">
         Este nuevo paradigma permite iniciar un número arbitrario de cálculos paralelos y reanudar la ejecución cuando todos ellos hayan finalizado.
     </p>
