@@ -1,0 +1,55 @@
+body{
+    background-color: #002044;
+    color: white;
+}
+
+.container{
+    text-align: center;
+}
+.container>*{
+    margin: 20px 0px;
+}
+
+.boton-enviar{
+    height: 30px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(255, 6, 46);
+    color: white;
+
+}
+
+.input-ciudad{
+    background: none;
+    border: none;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+#carta{
+    padding: 20px;
+    padding-top: 40px;
+    text-align: left;
+    margin: 0px auto;
+    height: 300px;
+    width: 18rem;
+    border: 0px;
+}
+
+#carta *{
+    margin-bottom: 10px;
+}
+
+.ciudad-carta{
+    color: #6f7687;
+}
+
+.img-carta{
+    height: 50px;
+    width: 50px;
+}
+
+.info-carta{
+    color: #b4b3bb;
+}
