@@ -1,0 +1,51 @@
+body {
+    background-color:brown  
+}
+
+body *{
+    margin: 20px 0px;
+}
+  
+.square {
+    float: left;
+    width: 30%;
+    height: 0;
+    padding-bottom: 30%;
+    background-color: burlywood;
+    margin: 5px;
+    border: 2px solid white;
+    visibility: visible;
+    opacity: 1;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+#message{
+    color: white;
+}
+
+#stripe{
+    text-align: center;
+}
+
+.dificultad{
+    text-align: center;
+    background-color: black;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 10px auto;
+    border-radius: 20px;
+    width: 15%;
+}
+
+.dificultad *{
+    margin: 0px 20px;
+}
