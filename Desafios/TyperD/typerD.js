@@ -81,7 +81,8 @@ function gameOver(){
 
     let replay_button = document.createElement("button")
     replay_button.setAttribute("onclick","location.reload()")
-    replay_button.textContent = "Volvé a empezar"
+    replay_button.textContent = "Jugar de Nuevo"
+    replay_button.style.color = "black"
 
     END_GAME_CONTAINER.appendChild(timeOver_h2)
     END_GAME_CONTAINER.appendChild(finalScore_p)

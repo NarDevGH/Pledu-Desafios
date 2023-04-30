@@ -2,10 +2,6 @@ body {
     background-color:brown  
 }
 
-body *{
-    margin: 20px 0px;
-}
-  
 .square {
     float: left;
     width: 30%;

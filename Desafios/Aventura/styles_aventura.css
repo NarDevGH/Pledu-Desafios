@@ -1,6 +1,9 @@
 body{
     font-family: Arial, Helvetica;
-    background: #e8e8e8;
+}
+
+body *{
+    color: white;
 }
 
 img{
@@ -66,4 +69,10 @@ img{
     display: inline-block;
     text-align: center;
 
+}
+
+.replay-button{
+    border-radius: 5px;
+    color: white;
+    background-color: #444b66;
 }
