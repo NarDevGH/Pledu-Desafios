@@ -12,4 +12,3 @@
 - Completar About Me.
 - Añadir estilo al TyperD.
 - Añadir estilo al Blog.
-- Añadir estilo a la Aventura.
