@@ -21,6 +21,12 @@ class Tarea{
         btn.textContent = "🔒"
 
         btn.addEventListener("click",_=>{
+            if(!this.input.disabled){
+                btn.textContent = "🔒" 
+            }
+            else{
+                btn.textContent = "🔓" 
+            }
             this.input.disabled = !this.input.disabled
         })
 
@@ -48,5 +54,6 @@ class Tarea{
         divTarea.appendChild(this.botonRemover())
 
         this.container.appendChild(divTarea)
+        return divTarea
     }
 }
