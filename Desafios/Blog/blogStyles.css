@@ -1,3 +1,47 @@
-body *{
+#left-panel{
+    background-color: #1e212a;
+    position: fixed;
+    border-radius: 20px;
+    width: 18%;
+    margin-top: 1%;
+    margin-left: -1%;
+    padding: 2% 2%;
+}
+
+.list-group *{
+    margin: 2px 0px;
+}
+
+
+#right-panel{
+    margin-left: 15%;
+    padding-left: 5%;
+    text-align: center;
+}
+
+#right-panel h1{
+    text-align: center;
     color: white;
+}
+#right-panel h2{
+    text-align: left;
+    color: white;
+}
+#right-panel hr{
+    text-align: left;
+    color: white;
+    border: 1px solid white;
+}
+#right-panel h3{
+    text-align: left;
+    color: white;
+}
+#right-panel p{
+    text-align: left;
+    color: white;
+}
+
+#right-panel a{
+    width: 10%;
+    margin-bottom: 2%;
 }
