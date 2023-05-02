@@ -32,6 +32,10 @@
     height: 380px;
 }
 
+.card:hover{
+    transform: scale(1.05);
+}
+
 .card-body{
     padding-left: 0px;
     padding-right: 0px;
