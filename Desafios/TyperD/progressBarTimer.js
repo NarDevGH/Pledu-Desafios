@@ -1,4 +1,10 @@
 
+/*
+Notas:
+    - En el metodo Start Debo pasar el objeto como funcion porque cuando setInterval ejecute timerRoutine, 
+    lo hara desde Window y no el objeto ProgressBarTimer, por lo que no podre referencial el objeto con this.
+*/
+
 class ProgressBarTimer{
     constructor(time, timeIntervals=1000,progressBar,callback){
         this.timeIntervals = timeIntervals;
@@ -11,7 +17,7 @@ class ProgressBarTimer{
     
     
     start(){
-        this.intervalId = setInterval(this.timerRoutine, this.timeIntervals);
+        this.intervalId = setInterval(this.timerRoutine, this.timeIntervals, this);
     }
 
     stop(){
@@ -69,11 +75,11 @@ class ProgressBarTimer{
         return this.currentTime < 2*this.thirdOfTime() && this.currentTime > this.thirdOfTime()
     }
 
-    timerRoutine(){
-        this.timer.currentTime -= 1;
-        this.timer.updateProgressBar();
-        if(this.timer.currentTime === 0){
-            this.timer.onTimeOver();
+    timerRoutine(timer){
+        timer.currentTime -= 1;
+        timer.updateProgressBar();
+        if(timer.currentTime === 0){
+            timer.onTimeOver();
         }
     }
 }
