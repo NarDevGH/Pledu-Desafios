@@ -33,21 +33,32 @@
         </div>
       </nav>
     <!-- Typer D --> 
-    <div class="container"></div>
-        <div class="main">
-            <h2>⌨️ TYPER 3000 ⌨️</h2>
-            <p>Escribí la siguiente palabra:</p>
-    
-            <h1 id="randomWord"></h1>
-    
-            <input type="text" id="text" autocomplete="off" placeholder="Type the word here..." />
-    
-            <p class="time-container">Tiempo restante: <span id="timeSpan">10s</span></p>
-    
-            <p class="score-container">Score: <span id="score">0</span></p>
-        </div>
-      <div id="end-game-container" class="end-game-container"></div>
+    <div class="contenedor">
+      <h1>⌨️ TYPER 3000 ⌨️</h1>
+      <div id="game-container">
+          <p>Escribí la siguiente palabra:</p>
+          <hr>
+          <h2 id="randomWord"></h2>
+          <hr>
+
+          <input type="text" id="player_input" autocomplete="off" placeholder="Type the word here..." />
+  
+          <h3 class="score">Score: <span id="score-span">0</span></h3>
+
+          <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+            <div id="progress-bar" class="progress-bar bg-success" style="width: 100%"></div>
+          </div>
+      </div>
+      <div id="gameover-container" style="display: none;">
+        <h2>⌛ Game Over ⌛</h2>
+        <hr>
+        <h2 class="score" id="final-score">Final Score: <span id="final-score-span"></span></h2>
+        <hr>
+        <button id="replay-button" class="btn btn-primary">Jugar de Nuevo</button>
+      </div>
     </div>
+    <script src='progressBarTimer.js'></script> 
+    <script src='randomWordSelector.js'></script>
     <script src='typerD.js'></script>
 </body>
 </html>

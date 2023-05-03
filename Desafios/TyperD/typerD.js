@@ -1,70 +1,22 @@
-const words = [
-    'flea',
-    'love',
-    'snow',
-    'dylan',
-    'funky',
-    'black',
-    'chili',
-    'summer',
-    'zephyr',
-    'peppers',
-    'getaway',
-    'quarter',
-    'stadium',
-    'arcadium',
-    'aeroplane',
-    'unlimited',
-    'plataforma5',
-    'quixoticelixer',
-    'californication',
-    'otorrinolaringologo'
-];
+
+const TIME = 10
+const TIME_INTERVALS = 1000
 
 const WORDS_H1 = document.querySelector("#randomWord")  
-const TIMER_SPAN = document.querySelector("#timeSpan")  
-const SCORE_SPAN = document.querySelector("#score")  
-const END_GAME_CONTAINER = document.querySelector("#end-game-container")
+const PLAYER_INPUT = document.querySelector("#player_input")
+const SCORE_SPAN = document.querySelector("#score-span")  
+const FINAL_SCORE_SPAN = document.querySelector("#final-score-span")  
+const PROGRESS_BAR = document.querySelector("#progress-bar")
+const GAME_CONTAINER = document.querySelector("#game-container")
+const GAMEOVER_CONTAINER = document.querySelector("#gameover-container")
+const REPLAY_BUTTON = document.querySelector("#replay-button")
 
-
-function getRndInteger(min, max) {
-  return Math.floor(Math.random() * (max - min) ) + min;
-}
-
-
-function randomWord(){
-    index = getRndInteger(0,words.length)
-    return words[index]
-}
+var randomWordSelector = new RandomWordSelector();
+var timer = new ProgressBarTimer(TIME,TIME_INTERVALS,PROGRESS_BAR,onTimerOver)
 
 function addToDOM(word){
     WORDS_H1.textContent = word
     return word
-}
-
-function addSecondToTimer(seconds){
-    time += 3
-    TIMER_SPAN.textContent = time
-}
-
-function onTextInputKeydown(e){
-    let text_input = document.querySelector("#text")
-    let palabraIngresada = text_input.value
-    if(palabraIngresada == palabraAleatoria){
-        addSecondToTimer(3)
-        updateScore()
-        text_input.value = ""
-        palabraAleatoria = addToDOM(randomWord())
-    }
-}
-
-function actualizarTiempo(){
-    time -= 1
-    TIMER_SPAN.textContent = time
-    if(time === 0){
-        clearInterval(timeInterval)
-        gameOver()
-    }
 }
 
 function updateScore(){
@@ -72,29 +24,37 @@ function updateScore(){
     SCORE_SPAN.textContent = score
 }
 
+function onInputChange(e){
+    if(PLAYER_INPUT.value == palabraAleatoria){
+        timer.restart()
+        updateScore()
+        PLAYER_INPUT.value = ""
+        palabraAleatoria = addToDOM(randomWordSelector.randomWord())
+    }
+}
+
+
 function gameOver(){
-    let timeOver_h2 = document.createElement("h2")
-    timeOver_h2.textContent = "Time Over"
+    GAME_CONTAINER.style.display = "none"
+    GAMEOVER_CONTAINER.style.display = "block"
+    FINAL_SCORE_SPAN.textContent = score
+    REPLAY_BUTTON.focus()
+}
 
-    let finalScore_p = document.createElement("p")
-    finalScore_p.textContent = `Final Score: ${score}`
+function onClickReplayButton(){
+    location.reload()
+}
 
-    let replay_button = document.createElement("button")
-    replay_button.setAttribute("onclick","location.reload()")
-    replay_button.textContent = "Jugar de Nuevo"
-    replay_button.style.color = "black"
-
-    END_GAME_CONTAINER.appendChild(timeOver_h2)
-    END_GAME_CONTAINER.appendChild(finalScore_p)
-    END_GAME_CONTAINER.appendChild(replay_button)
+function onTimerOver(){
+    gameOver()
 }
 
 let score = 0
-let time = 10
 
-let palabraAleatoria = addToDOM(randomWord())
+timer.start()
 
+let palabraAleatoria = addToDOM(randomWordSelector.randomWord())
+PLAYER_INPUT.addEventListener('input', onInputChange)
+REPLAY_BUTTON.addEventListener("click", onClickReplayButton)
 
-document.querySelector("input").addEventListener('keydown', onTextInputKeydown)
-
-let timeInterval = setInterval(actualizarTiempo, 1000);
+PLAYER_INPUT.focus()

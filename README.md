@@ -9,5 +9,3 @@
 
 ## ToDO:
 - Completar About Me.
-- Añadir estilo al TyperD.
-- Añadir estilo al Blog.

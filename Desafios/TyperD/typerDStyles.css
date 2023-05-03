@@ -1,7 +1,52 @@
 
-body{
+.contenedor{
+    margin-top: 10%;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 20px 0px;
+    background-color: gray;
     text-align: center;
+    border-radius: 20px;
 }
-body *{
+
+
+.contenedor .score{
     color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.progress{
+    margin-bottom: -20px;
+}
+
+hr{
+    border: 2px solid black;
+    margin: 5px 0px;
+}
+
+#game-container #randomWord{
+    color: white;
+}
+#game-container #player_input{
+    margin-top: 20px;
+}
+
+#game-container p{
+    color: white;
+    margin-top: 20px ;
+    font-size: 20px;
+}
+
+#gameover-container *{
+    margin: 30px 0px;
+}
+
+#gameover-container h2{
+    color: white;
+}
+
+#gameover-container button{
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
