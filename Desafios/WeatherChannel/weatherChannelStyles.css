@@ -1,15 +1,16 @@
-body{
+body {
     color: white;
 }
 
-.container{
+.container {
     text-align: center;
 }
-.container>*{
+
+.container>* {
     margin: 20px 0px;
 }
 
-.boton-enviar{
+.boton-enviar {
     height: 30px;
     margin: 5px;
     border: none;
@@ -19,14 +20,14 @@ body{
 
 }
 
-.input-ciudad{
+.input-ciudad {
     background: none;
     border: none;
     color: white;
     border-bottom: 1px solid white;
 }
 
-#carta{
+#carta {
     padding: 20px;
     padding-top: 40px;
     text-align: left;
@@ -36,19 +37,19 @@ body{
     border: 0px;
 }
 
-#carta *{
+#carta * {
     margin-bottom: 10px;
 }
 
-.ciudad-carta{
+.ciudad-carta {
     color: #6f7687;
 }
 
-.img-carta{
+.img-carta {
     height: 50px;
     width: 50px;
 }
 
-.info-carta{
+.info-carta {
     color: #b4b3bb;
 }

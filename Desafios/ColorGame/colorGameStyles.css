@@ -1,5 +1,5 @@
 body {
-    background-color:brown  
+    background-color: brown
 }
 
 .square {
@@ -24,15 +24,15 @@ h1 {
     text-align: center;
 }
 
-#message{
+#message {
     color: white;
 }
 
-#stripe{
+#stripe {
     text-align: center;
 }
 
-.dificultad{
+.dificultad {
     text-align: center;
     background-color: black;
     text-align: center;
@@ -42,6 +42,6 @@ h1 {
     width: 15%;
 }
 
-.dificultad *{
+.dificultad * {
     margin: 0px 20px;
 }

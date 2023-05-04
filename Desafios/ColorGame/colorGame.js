@@ -14,34 +14,34 @@ let pickedColor = pickColor()
 
 let currentBackgroundColor = "brown"
 
-let resetButton = document.querySelector("button#reset") 
+let resetButton = document.querySelector("button#reset")
 resetButton.addEventListener("click", reset)
 
-easyButon.addEventListener("click", e =>{
-    if(!easyButon.classList.contains("btn-success")){
+easyButon.addEventListener("click", e => {
+    if (!easyButon.classList.contains("btn-success")) {
         easyButon.classList.remove("btn-outline-success")
         hardButon.classList.remove("btn-danger")
         easyButon.classList.add("btn-success")
         hardButon.classList.add("btn-outline-danger")
-        
+
         document.body.style = "background-color:darkgreen"
         currentBackgroundColor = "darkgreen"
-    
+
         cantidadColores = 3
         reset()
     }
 })
 
-hardButon.addEventListener("click",_=>{
-    if(!hardButon.classList.contains("btn-danger")){
+hardButon.addEventListener("click", _ => {
+    if (!hardButon.classList.contains("btn-danger")) {
         easyButon.classList.remove("btn-success")
         hardButon.classList.remove("btn-outline-danger")
         easyButon.classList.add("btn-outline-success")
         hardButon.classList.add("btn-danger")
-        
+
         document.body.style = "background-color:brown"
         currentBackgroundColor = "brown"
-    
+
         cantidadColores = 6
         reset()
     }
@@ -49,48 +49,48 @@ hardButon.addEventListener("click",_=>{
 
 reset()
 
-function changeColors(color){
-    for(let i=0;i<cuadrados.length;i++){
-        cuadrados[i].style = `background-color: ${color}` 
-    }    
+function changeColors(color) {
+    for (let i = 0; i < cuadrados.length; i++) {
+        cuadrados[i].style = `background-color: ${color}`
+    }
 }
 
-function randomNum(){
-    let num = Math.random()*10
-    while(num > cantidadColores){
-        num = Math.random()*10
+function randomNum() {
+    let num = Math.random() * 10
+    while (num > cantidadColores) {
+        num = Math.random() * 10
     }
     return num
 }
 
-function pickColor(){
-    return colors[ Math.floor(randomNum()) ]
+function pickColor() {
+    return colors[Math.floor(randomNum())]
 }
 
-function randomColors(cantidad){
+function randomColors(cantidad) {
     let colores = []
-    for(let i=0;i<cantidad;i++){
-        colores.push(`rgb(${Math.floor(Math.random()*100)}, ${Math.floor(Math.random()*100)}, ${Math.floor(Math.random()*100)})`)
+    for (let i = 0; i < cantidad; i++) {
+        colores.push(`rgb(${Math.floor(Math.random() * 100)}, ${Math.floor(Math.random() * 100)}, ${Math.floor(Math.random() * 100)})`)
     }
     return colores
 }
 
-function onCuadradoClick(e){
+function onCuadradoClick(e) {
     let button = e.srcElement
-    if(button.style.backgroundColor == pickedColor){
+    if (button.style.backgroundColor == pickedColor) {
         mensaje.textContent = "!Correcto¡"
-        colorDisplay.style.color =  pickedColor
+        colorDisplay.style.color = pickedColor
         console.info(mensaje.parentElement.style)
         resetButton.textContent = "Play Again?"
         changeColors(pickedColor)
     }
-    else{
-        button.style = `background-color: ${currentBackgroundColor}` 
+    else {
+        button.style = `background-color: ${currentBackgroundColor}`
         mensaje.textContent = "Intentalo nuevamente"
     }
 }
 
-function reset(){
+function reset() {
     colors = randomColors(cantidadColores)
     pickedColor = pickColor()
 
@@ -99,12 +99,12 @@ function reset(){
     mensaje.textContent = ""
     resetButton.textContent = "Nuevos Colores"
 
-    for(let i=0;i<cuadrados.length;i++){
-        if(i < cantidadColores){
-            cuadrados[i].style = `background-color: ${colors[i]}` 
+    for (let i = 0; i < cuadrados.length; i++) {
+        if (i < cantidadColores) {
+            cuadrados[i].style = `background-color: ${colors[i]}`
             cuadrados[i].addEventListener("click", onCuadradoClick)
         }
-        else{
+        else {
             cuadrados[i].style = "visibility: hidden;opacity: 0;transition: .5s;"
         }
     }

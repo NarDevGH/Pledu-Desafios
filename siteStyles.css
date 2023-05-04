@@ -1,33 +1,36 @@
-body{
+body {
     background-color: #2e313f;
 }
 
-.navbar{
+.navbar {
     background-color: #1e212a;
 }
 
-.navbar-brand{
+.navbar-brand {
     color: white;
     margin: 5px 5%;
 }
-.navbar-brand:hover{
+
+.navbar-brand:hover {
     color: white;
 }
 
-.nav-link{
+.nav-link {
     margin: 5px 10px;
     border-radius: 5px;
     color: white;
     background-color: #444b66;
     padding-left: 20px;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     background-color: #747ea7;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     border: 1px solid white;
 }
-.navbar-toggler-icon{
+
+.navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }

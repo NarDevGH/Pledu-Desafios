@@ -1,60 +1,63 @@
-.container hr{
+.container hr {
     color: white;
 }
 
-.carousel{
+.carousel {
     margin: 20px 10%;
 }
 
-.carousel img{
+.carousel img {
     height: 450px;
 }
 
-.carousel-caption{
-    background-color: rgba(30, 33 , 42, .75);
+.carousel-caption {
+    background-color: rgba(30, 33, 42, .75);
     border-radius: 20px;
     color: white;
     margin: 20px 0px;
 }
-.carousel-caption p{
+
+.carousel-caption p {
     font-size: 20px;
 }
 
 
-.container h2{
+.container h2 {
     color: white;
 }
 
-.card{
+.card {
     padding: 10px 0px;
     border: 2px solid #62656f;
     border-radius: 30px;
     height: 380px;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.05);
 }
 
-.card-body{
+.card-body {
     padding-left: 0px;
     padding-right: 0px;
 }
 
-.card-body h5{
+.card-body h5 {
     text-align: center;
 }
-.card-body hr{
+
+.card-body hr {
     color: black;
     margin: 0px auto;
     width: 80%;
     margin-bottom: 5px;
 }
-.card-body p{
+
+.card-body p {
     margin-left: 10px;
     margin-right: 20px;
 }
 
-.row{
+.row {
     margin-bottom: 30px;
 }

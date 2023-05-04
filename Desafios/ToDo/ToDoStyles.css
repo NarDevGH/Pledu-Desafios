@@ -1,13 +1,12 @@
-
-body{
+body {
     text-align: center;
 }
 
-body>h1{
+body>h1 {
     color: white;
 }
 
-.input{
+.input {
     width: 450px;
     height: 50px;
     margin: 5px;
@@ -18,7 +17,7 @@ body>h1{
     font-size: 18px;
 }
 
-.boton-agregar{
+.boton-agregar {
     width: 50px;
     height: 50px;
     margin: 5px;
@@ -29,11 +28,11 @@ body>h1{
 
 }
 
-.boton-agregar:hover{
+.boton-agregar:hover {
     opacity: 0.9;
 }
 
-.boton-editar{
+.boton-editar {
     margin: 0px 5px;
     border: none;
     background: none;
@@ -42,7 +41,7 @@ body>h1{
     font-family: "Montserrat, sans-serif";
 }
 
-.boton-remover{
+.boton-remover {
     width: 50px;
     height: 50px;
     margin: 0px 5px;
@@ -52,16 +51,17 @@ body>h1{
     font-size: 20px
 }
 
-.item{
+.item {
     margin-bottom: 10px;
 }
 
-.item-input{
+.item-input {
     height: 50px;
     padding: 0px 20px;
     border: 1px solid white;
     border-radius: 10px;
     font-size: 18px;
     color: white;
-    background: none;;
+    background: none;
+    ;
 }

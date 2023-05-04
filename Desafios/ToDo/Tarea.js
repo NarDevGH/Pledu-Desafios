@@ -1,13 +1,13 @@
 
-class Tarea{
-    constructor(descripcion, container){
+class Tarea {
+    constructor(descripcion, container) {
         this.descripcion = descripcion
         this.container = container
         this.input = this.inputDescripcion()
-        this.divTarea = this.createDiv() 
+        this.divTarea = this.createDiv()
     }
 
-    inputDescripcion(){
+    inputDescripcion() {
         let input = document.createElement("input")
         input.classList.add("item-input")
         input.value = this.descripcion
@@ -15,17 +15,17 @@ class Tarea{
         return input
     }
 
-    botonEditar(){
+    botonEditar() {
         let btn = document.createElement("button")
         btn.classList.add("boton-editar")
         btn.textContent = "🔒"
 
-        btn.addEventListener("click",_=>{
-            if(!this.input.disabled){
-                btn.textContent = "🔒" 
+        btn.addEventListener("click", _ => {
+            if (!this.input.disabled) {
+                btn.textContent = "🔒"
             }
-            else{
-                btn.textContent = "🔓" 
+            else {
+                btn.textContent = "🔓"
             }
             this.input.disabled = !this.input.disabled
         })
@@ -33,19 +33,19 @@ class Tarea{
         return btn
     }
 
-    botonRemover(){
+    botonRemover() {
         let btn = document.createElement("button")
         btn.classList.add("boton-remover")
         btn.textContent = "🗑️"
 
-        btn.addEventListener("click", _=>{
+        btn.addEventListener("click", _ => {
             this.container.removeChild(this.divTarea)
         })
 
         return btn
     }
 
-    createDiv(){
+    createDiv() {
         let divTarea = document.createElement("div")
         divTarea.classList.add("item")
 

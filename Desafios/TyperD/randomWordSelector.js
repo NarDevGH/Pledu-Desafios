@@ -22,12 +22,12 @@ const words = [
 ];
 
 function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min) ) + min;
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
-class RandomWordSelector{
-    randomWord(){
-        let index = getRndInteger(0,words.length)
+class RandomWordSelector {
+    randomWord() {
+        let index = getRndInteger(0, words.length)
         return words[index]
     }
 }

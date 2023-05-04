@@ -1,28 +1,31 @@
-body{
+body {
     font-family: Arial, Helvetica;
 }
 
-body *{
+body * {
     color: white;
 }
 
-img{
+img {
     height: 200px;
     width: 200px;
     border-radius: 20px;
 }
-.container{
+
+.container {
     margin-top: 2%;
 }
-.container *{
+
+.container * {
     justify-content: center;
 }
-.options_div{
+
+.options_div {
     margin-top: 4%;
     display: flex;
 }
 
-.card{
+.card {
     text-align: center;
     height: 380px;
     margin-left: 5%;
@@ -31,53 +34,56 @@ img{
     border: 2px solid #62656f;
     border-radius: 30px;
 }
-.card:hover{
+
+.card:hover {
     transform: scale(1.1);
 }
 
-.card-body{
+.card-body {
     padding-left: 0px;
     padding-right: 0px;
 }
 
-.card-body h3{
+.card-body h3 {
     margin-top: 10px;
     text-align: center;
 }
-.card-body hr{
+
+.card-body hr {
     color: black;
     margin: 0px auto;
     width: 80%;
     margin-bottom: 5px;
 }
-.card-body p{
+
+.card-body p {
     color: black;
     margin-left: 20px;
     margin-right: 20px;
 }
 
 
-.center_text{
+.center_text {
     width: auto;
     text-align: center;
 }
 
-.options_div p{
+.options_div p {
     max-width: 200px;
 }
 
-.text_situacion{
+.text_situacion {
     margin-left: 10%;
     margin-right: 10%;
 }
 
-.center{
+.center {
     display: flex;
     margin-left: auto;
     margin-right: auto;
 }
 
-.menu{
+.menu {
     list-style: none;
     padding: 0;
     background: #092327;
@@ -86,24 +92,24 @@ img{
     margin: auto;
 }
 
-.menu li a{
+.menu li a {
     text-decoration: none;
     color: white;
     padding: 20px;
     display: block;
 }
 
-.menu li a:hover{
+.menu li a:hover {
     background: #4eb5f0;
 }
 
-.menu li{
+.menu li {
     display: inline-block;
     text-align: center;
 
 }
 
-.replay-button{
+.replay-button {
     border-radius: 5px;
     color: white;
     background-color: #444b66;

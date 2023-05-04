@@ -1,131 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <!-- Bootstrap -->
-    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ' crossorigin='anonymous'>
-    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe' crossorigin='anonymous'></script>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ' crossorigin='anonymous'>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js'
+        integrity='sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe'
+        crossorigin='anonymous'></script>
     <!-- My Styles -->
     <link href='../../siteStyles.css' rel='stylesheet' type='text/css'>
     <link href='blogStyles.css' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
-    <!-- Navigation Bar --> 
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-sm">
-        <div class="container-fluid" >
-          <a class="navbar-brand" href="#">PORTFOLIO</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="../../index.html">PLEDU</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../../about_me.html">ABOUT ME</a>
-              </li>
-            </ul>
-          </div>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">PORTFOLIO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">PLEDU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../about_me.html">ABOUT ME</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <!-- Blog --> 
+    <!-- Blog -->
     <div id="left-panel">
         <div class="list-group">
-            <a  class="btn btn-outline-primary" href="#introduccion" class="list-group-item list-group-item-action active" aria-current="true">
+            <a class="btn btn-outline-primary" href="#introduccion"
+                class="list-group-item list-group-item-action active" aria-current="true">
                 Introduccion
             </a>
-            <a  class="btn btn-outline-primary" href="#esperas_sincronas" class="list-group-item list-group-item-action">Esperas Sincronas</a>
-            <a  class="btn btn-outline-primary" href="#corutinas_asincronas" class="list-group-item list-group-item-action">Corutinas Asincronas</a>
-            <a  class="btn btn-outline-primary" href="#corutinas_sincronas" class="list-group-item list-group-item-action">Corutinas Sincronas</a>
-            <a  class="btn btn-outline-primary" href="#corutinas_paralelas" class="list-group-item list-group-item-action">Corutinas Paralelas</a>
+            <a class="btn btn-outline-primary" href="#esperas_sincronas"
+                class="list-group-item list-group-item-action">Esperas Sincronas</a>
+            <a class="btn btn-outline-primary" href="#corutinas_asincronas"
+                class="list-group-item list-group-item-action">Corutinas Asincronas</a>
+            <a class="btn btn-outline-primary" href="#corutinas_sincronas"
+                class="list-group-item list-group-item-action">Corutinas Sincronas</a>
+            <a class="btn btn-outline-primary" href="#corutinas_paralelas"
+                class="list-group-item list-group-item-action">Corutinas Paralelas</a>
         </div>
     </div>
     <div id="right-panel">
         <h1 class="center">Corutinas en Unity</h1>
         <h2 id="introduccion" class="center">Introduccion</h2>
         <hr>
-        <p class="center">Cada script de Unity viene con dos funciones importantes: Iniciar y Actualizar. Mientras que la primera es invocada cuando un objeto es habilitado después de ser creado, la segunda es llamada durante cada cuadro. Por diseño, el siguiente frame no puede comenzar hasta que Update haya terminado su trabajo. Esto introduce una fuerte limitación de diseño: Update no puede modelar fácilmente eventos que duren más de un frame.<br>
-        <br>
-        Para ser completamente honesto, cualquier comportamiento personalizado que puedas imaginar puede ser implementado usando Start y Update. Sin embargo, los eventos que suceden a lo largo de múltiples frames (como animaciones, diálogos, esperas, ...) son más difíciles de codificar. Esto se debe a que su lógica no puede ser escrita en un flujo consistente. Tiene que ser fragmentada, repartida en múltiples fotogramas. Esto a menudo conduce a un código que no sólo es más difícil de escribir, sino también más difícil de mantener.<br>
-        <br>
-        Lo que sería perfecto es tener algo que pueda ejecutarse en paralelo, sin las restricciones de la corta vida de un solo fotograma. Si eres programador, probablemente te suene el concepto de hilo. Los hilos son trozos de código que se ejecutan en paralelo. Trabajar con hilos, sin embargo, es muy complicado. Esto es porque cuando múltiples hilos están trabajando en una variable compartida sin ninguna limitación, puede haber problemas. Por diseño, Unity desalienta fuertemente el uso de hilos. Sin embargo, ofrece un buen compromiso: corutinas. corutinas son funciones que pueden durar más de un frame. Además, vienen con construcciones expresivas para interrumpir y reanudar sus ejecuciones debido a condiciones arbitrarias.<br>
-        <br>
-        Las corutinas son funciones normales de C# que devuelven IEnumerator. Para ejecutar una función como una coroutine (y no como una función tradicional), hay que utilizar el método StartCoroutine<br>
-        <br>
-        Por ejemplo<br>
-        <br>
-    
-        <p class="center"> A se ejecuta como una coroutina. El método StartCoroutine termina inmediatamente, pero genera una nueva corutina que se ejecuta en paralelo.</p>
+        <p class="center">Cada script de Unity viene con dos funciones importantes: Iniciar y Actualizar. Mientras que
+            la primera es invocada cuando un objeto es habilitado después de ser creado, la segunda es llamada durante
+            cada cuadro. Por diseño, el siguiente frame no puede comenzar hasta que Update haya terminado su trabajo.
+            Esto introduce una fuerte limitación de diseño: Update no puede modelar fácilmente eventos que duren más de
+            un frame.<br>
+            <br>
+            Para ser completamente honesto, cualquier comportamiento personalizado que puedas imaginar puede ser
+            implementado usando Start y Update. Sin embargo, los eventos que suceden a lo largo de múltiples frames
+            (como animaciones, diálogos, esperas, ...) son más difíciles de codificar. Esto se debe a que su lógica no
+            puede ser escrita en un flujo consistente. Tiene que ser fragmentada, repartida en múltiples fotogramas.
+            Esto a menudo conduce a un código que no sólo es más difícil de escribir, sino también más difícil de
+            mantener.<br>
+            <br>
+            Lo que sería perfecto es tener algo que pueda ejecutarse en paralelo, sin las restricciones de la corta vida
+            de un solo fotograma. Si eres programador, probablemente te suene el concepto de hilo. Los hilos son trozos
+            de código que se ejecutan en paralelo. Trabajar con hilos, sin embargo, es muy complicado. Esto es porque
+            cuando múltiples hilos están trabajando en una variable compartida sin ninguna limitación, puede haber
+            problemas. Por diseño, Unity desalienta fuertemente el uso de hilos. Sin embargo, ofrece un buen compromiso:
+            corutinas. corutinas son funciones que pueden durar más de un frame. Además, vienen con construcciones
+            expresivas para interrumpir y reanudar sus ejecuciones debido a condiciones arbitrarias.<br>
+            <br>
+            Las corutinas son funciones normales de C# que devuelven IEnumerator. Para ejecutar una función como una
+            coroutine (y no como una función tradicional), hay que utilizar el método StartCoroutine<br>
+            <br>
+            Por ejemplo<br>
+            <br>
+
+        <p class="center"> A se ejecuta como una coroutina. El método StartCoroutine termina inmediatamente, pero genera
+            una nueva corutina que se ejecuta en paralelo.</p>
         <br>
         <h3 class="center"> Por qué las Corutinas deben tener IEnumerator como tipo de retorno ❓</h3>
         <p class="center">
-            Las corutinas en Unity están basadas en iteradores de C#. Los iteradores son una forma expresiva de modelar objetos sobre los que se puede iterar, como listas y otras colecciones. En C#, esto se hace usando la interfaz 
+            Las corutinas en Unity están basadas en iteradores de C#. Los iteradores son una forma expresiva de modelar
+            objetos sobre los que se puede iterar, como listas y otras colecciones. En C#, esto se hace usando la
+            interfaz
             IEnumerador.<br>
             <br>
-            Unity trata las corutinas como "listas de código". Pedir a una coroutine que produzca su siguiente elemento tiene el significado de ejecutar su siguiente paso. Como tal, cada función que necesita durar más de un cuadro es requerida para usar IEnumerator como su tipo de retorno.
+            Unity trata las corutinas como "listas de código". Pedir a una coroutine que produzca su siguiente elemento
+            tiene el significado de ejecutar su siguiente paso. Como tal, cada función que necesita durar más de un
+            cuadro es requerida para usar IEnumerator como su tipo de retorno.
         </p>
         <h3 class="center"> Las Corutinas se ejecutan en paralelo ❓</h3>
         <p class="center">
-            No. Unity generalmente no es thread safe. Lo que significa que ejecutar dos piezas de código en paralelo puede potencialmente romper su juego. Como tal, durante cada cuadro, Unity ejecuta un bit de cada coroutine activa, secuencialmente.
+            No. Unity generalmente no es thread safe. Lo que significa que ejecutar dos piezas de código en paralelo
+            puede potencialmente romper su juego. Como tal, durante cada cuadro, Unity ejecuta un bit de cada coroutine
+            activa, secuencialmente.
         </p>
         <h3 class="center"> Puedo seguir teniendo hilos en Unity ❓</h3>
         <p class="center">
-            Sí. Varias partes de Unity corren en hilos separados (audio, Mecanim, Skinning, ...). Mientras GameObjects y MonoBehaviours no están diseñados para ser thread safe, esto no significa que no puedan ser accedidos por threads. Cada acceso a un recurso compartido (como un objeto de juego o una variable) necesita ser controlado adecuadamente, para evitar resultados inconsistentes.  Se pueden utilizar hilos, pero para la gran mayoría de las aplicaciones cotidianas, el coste de microgestionar los accesos a los recursos compartidos no merece la pena.
+            Sí. Varias partes de Unity corren en hilos separados (audio, Mecanim, Skinning, ...). Mientras GameObjects y
+            MonoBehaviours no están diseñados para ser thread safe, esto no significa que no puedan ser accedidos por
+            threads. Cada acceso a un recurso compartido (como un objeto de juego o una variable) necesita ser
+            controlado adecuadamente, para evitar resultados inconsistentes. Se pueden utilizar hilos, pero para la gran
+            mayoría de las aplicaciones cotidianas, el coste de microgestionar los accesos a los recursos compartidos no
+            merece la pena.
         </p>
         <h2 id="esperas_sincronas" class="center"> Esperas Síncronas</h2>
         <hr>
         <p class="center">
-            Si has utilizado corutinas anteriormente, es probable que ya te hayas encontrado con la clase <a href="https://docs.unity3d.com/ScriptReference/WaitForSeconds.html">WaitForSeconds</a>. Como todas las demás clases que extienden YieldInstruction, permite suspender temporalmente la ejecución de una coroutine. Cuando se combina con yield return, WaitForSeconds proporciona una forma expresiva de retrasar la ejecución del código restante.<br>
+            Si has utilizado corutinas anteriormente, es probable que ya te hayas encontrado con la clase <a
+                href="https://docs.unity3d.com/ScriptReference/WaitForSeconds.html">WaitForSeconds</a>. Como todas las
+            demás clases que extienden YieldInstruction, permite suspender temporalmente la ejecución de una coroutine.
+            Cuando se combina con yield return, WaitForSeconds proporciona una forma expresiva de retrasar la ejecución
+            del código restante.<br>
             <br>
             El siguiente fragmento de código muestra cómo puede utilizarse dentro de una coroutine:
         </p>
         <p class="center">
-            El diagrama anterior, inspirado libremente en los <a href="https://en.wikipedia.org/wiki/Sequence_diagram">diagramas de secuencia de UML</a>, ilustra el efecto de <a href="https://docs.unity3d.com/ScriptReference/WaitForSeconds.html">WaitForSeconds</a>. Cuando se invoca en una coroutine (llamada A) suspende su ejecución hasta que haya transcurrido una cierta cantidad de tiempo. Este tipo de espera se denomina síncrona, porque la coroutina espera a que se complete otra operación.
+            El diagrama anterior, inspirado libremente en los <a
+                href="https://en.wikipedia.org/wiki/Sequence_diagram">diagramas de secuencia de UML</a>, ilustra el
+            efecto de <a href="https://docs.unity3d.com/ScriptReference/WaitForSeconds.html">WaitForSeconds</a>. Cuando
+            se invoca en una coroutine (llamada A) suspende su ejecución hasta que haya transcurrido una cierta cantidad
+            de tiempo. Este tipo de espera se denomina síncrona, porque la coroutina espera a que se complete otra
+            operación.
         </p>
         <h3 class="center"> Que Significa Yield ❓</h3>
         <p class="center">
-            La palabra clave yield es utilizada por C# para escribir iteradores. Los objetos que devuelven IEnumerator pueden ser tratados como "colecciones" y pueden ser iterados utilizando un bucle foreach. En este contexto, yield es la forma de devolver un objeto en el bucle for. Esto se discute en gran detalle en Iteradores en C#: yield, IEnumerable e IEnumerator.
+            La palabra clave yield es utilizada por C# para escribir iteradores. Los objetos que devuelven IEnumerator
+            pueden ser tratados como "colecciones" y pueden ser iterados utilizando un bucle foreach. En este contexto,
+            yield es la forma de devolver un objeto en el bucle for. Esto se discute en gran detalle en Iteradores en
+            C#: yield, IEnumerable e IEnumerator.
         </p>
         <h2 id="corutinas_asincronas" class="center">Corutinas Asíncronas</h2>
         <hr>
         <p class="center">
-            Unity también permite iniciar nuevas corutinas dentro de una coroutine existente. La manera más simple en que esto puede ser logrado, es usando StartCoroutine. Cuando se invoca de esta manera, la coroutine generada coexiste en paralelo con la original. No interactúan directamente, y lo que es más importante, no se esperan la una a la otra. En comparación con la espera sincrónica presentada en el párrafo anterior, esta situación es asincrónica, ya que las dos corutinas no intentan permanecer sincronizadas.
+            Unity también permite iniciar nuevas corutinas dentro de una coroutine existente. La manera más simple en
+            que esto puede ser logrado, es usando StartCoroutine. Cuando se invoca de esta manera, la coroutine generada
+            coexiste en paralelo con la original. No interactúan directamente, y lo que es más importante, no se esperan
+            la una a la otra. En comparación con la espera sincrónica presentada en el párrafo anterior, esta situación
+            es asincrónica, ya que las dos corutinas no intentan permanecer sincronizadas.
         </p>
         <p class="center">
-            Es importante notar que, en este ejemplo, B es una coroutine totalmente independiente. Terminar A no afecta a B, y viceversa.
+            Es importante notar que, en este ejemplo, B es una coroutine totalmente independiente. Terminar A no afecta
+            a B, y viceversa.
         </p>
         <h2 id="corutinas_sincronas" class="center">Corutinas síncronas</h2>
         <hr>
         <p class="center">
-            También es posible ejecutar una coroutine anidada y esperar a que se complete su ejecución. La forma más sencilla de hacerlo es utilizando yield return.
+            También es posible ejecutar una coroutine anidada y esperar a que se complete su ejecución. La forma más
+            sencilla de hacerlo es utilizando yield return.
         </p>
         <p class="center">
-            Vale la pena notar que, dado que la ejecución de A se suspende durante la ejecución de B, este caso particular no necesita iniciar otra coroutina. Uno podría tener la tentación de optimizar la coroutine escribiendo algo como esto:
+            Vale la pena notar que, dado que la ejecución de A se suspende durante la ejecución de B, este caso
+            particular no necesita iniciar otra coroutina. Uno podría tener la tentación de optimizar la coroutine
+            escribiendo algo como esto:
         </p>
         <p class="center">
-            Ejecutar B como una función tradicional tiene casi el mismo efecto. La única diferencia, sin embargo, es que B se ejecutará en un único fotograma. Usando StartCoroutine, en cambio, A se suspende y el siguiente frame puede ocurrir.<br>
+            Ejecutar B como una función tradicional tiene casi el mismo efecto. La única diferencia, sin embargo, es que
+            B se ejecutará en un único fotograma. Usando StartCoroutine, en cambio, A se suspende y el siguiente frame
+            puede ocurrir.<br>
             <br>
-            La razón por la que se muestra este ejemplo, sin embargo, es para introducir casos más complejos de sincronización de coroutinas.
+            La razón por la que se muestra este ejemplo, sin embargo, es para introducir casos más complejos de
+            sincronización de coroutinas.
         </p>
         <h2 id="corutinas_paralelas" class="center">Corutinas Paralelas</h2>
         <hr>
         <p class="center">
-            Cuando se inicia una corrutina utilizando StartCoroutine, se devuelve un objeto especial. Éste puede utilizarse para consultar el estado de la coroutina y, opcionalmente, para esperar su finalización.<br>
+            Cuando se inicia una corrutina utilizando StartCoroutine, se devuelve un objeto especial. Éste puede
+            utilizarse para consultar el estado de la coroutina y, opcionalmente, para esperar su finalización.<br>
             <br>
-            En el siguiente ejemplo, la coroutina B se ejecuta de forma asíncrona. Su padre A puede continuar su ejecución durante el tiempo que necesite. Luego, si es necesario, puede ceder la referencia a B para una espera sincrónica.
+            En el siguiente ejemplo, la coroutina B se ejecuta de forma asíncrona. Su padre A puede continuar su
+            ejecución durante el tiempo que necesite. Luego, si es necesario, puede ceder la referencia a B para una
+            espera sincrónica.
         </p>
         <p class="center">
             Esto es particularmente útil si desea iniciar varias corutinas paralelas, todas al mismo tiempo:
         </p>
         <p class="center">
-            Este nuevo paradigma permite iniciar un número arbitrario de cálculos paralelos y reanudar la ejecución cuando todos ellos hayan finalizado.
+            Este nuevo paradigma permite iniciar un número arbitrario de cálculos paralelos y reanudar la ejecución
+            cuando todos ellos hayan finalizado.
         </p>
         <br>
-        <a  class="btn btn-outline-primary" href="../../index.html">Go Back.</a>
+        <a class="btn btn-outline-primary" href="../../index.html">Go Back.</a>
     </div>
 </body>
+
 </html>
