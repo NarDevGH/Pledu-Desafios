@@ -1,3 +1,4 @@
+import Tarea from './Tarea.js'
 
 const inputField = document.querySelector("input")
 const btnAgregar = document.querySelector(".boton-agregar")
