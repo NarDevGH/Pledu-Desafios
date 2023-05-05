@@ -1,3 +1,5 @@
+import RandomWordSelector from './randomWordSelector.js'
+import ProgressBarTimer from './progressBarTimer.js'
 
 const TIME = 10
 const TIME_INTERVALS = 1000

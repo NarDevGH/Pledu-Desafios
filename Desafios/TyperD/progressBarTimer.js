@@ -5,7 +5,7 @@ Notas:
     lo hara desde Window y no el objeto ProgressBarTimer, por lo que no podre referencial el objeto con this.
 */
 
-class ProgressBarTimer {
+export default class ProgressBarTimer {
     constructor(time, timeIntervals = 1000, progressBar, callback) {
         this.timeIntervals = timeIntervals;
         this.progressBar = progressBar;

@@ -25,7 +25,7 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-class RandomWordSelector {
+export default class RandomWordSelector {
     randomWord() {
         let index = getRndInteger(0, words.length)
         return words[index]
