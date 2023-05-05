@@ -1,5 +1,5 @@
 
-class Tarea {
+export default class Tarea {
     constructor(descripcion, container) {
         this.descripcion = descripcion
         this.container = container
