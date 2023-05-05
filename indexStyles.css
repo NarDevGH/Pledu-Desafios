@@ -1,3 +1,8 @@
+:root {
+    --carousel-caption-text-color: white;
+    --carousel-caption-background-color: rgba(30, 33, 42, .75);
+}
+
 .container hr {
     color: white;
 }
@@ -11,10 +16,10 @@
 }
 
 .carousel-caption {
-    background-color: rgba(30, 33, 42, .75);
     border-radius: 20px;
-    color: white;
     margin: 20px 0px;
+    color: var(--carousel-caption-text-color);
+    background-color: var(--carousel-caption-background-color);
 }
 
 .carousel-caption p {
