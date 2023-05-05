@@ -1,0 +1,36 @@
+:root {
+    --paragraph-text-color: white;
+    --resultado-text-color: white;
+}
+
+
+.container {
+    justify-content: center;
+}
+
+p {
+    color: var(--paragraph-text-color);
+}
+
+h2 {
+    width: auto;
+    text-align: center;
+    color: var(--resultado-text-color);
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.container {
+    margin-top: 2%;
+}
+
+
+.center {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
